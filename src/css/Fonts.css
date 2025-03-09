@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'RedHatText';
+    src: url('/assets/fonts/RedHatText-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'RedHatText';
+    src: url('/assets/fonts/RedHatText-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'RedHatText';
+    src: url('/assets/fonts/RedHatText-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'RedHatText';
+    src: url('/assets/fonts/RedHatText-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+  }
+  

@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+
+
+@theme {
+  /* Colors */
+  --color-m-Red: hsl(14, 86%, 42%);
+  --color-m-Green: hsl(159, 69%, 38%);
+  --color-m-Rose50: hsl(20, 50%, 98%);
+  --color-m-Rose100: hsl(13, 31%, 94%);
+  --color-m-Rose300: hsl(14, 25%, 72%);
+  --color-m-Rose400: hsl(7, 20%, 60%);
+  --color-m-Rose500: hsl(12, 20%, 44%);
+  --color-m-Rose900: hsl(14, 65%, 9%);
+
+
+  /* Font */
+  --font-RedHatText: 'RedHatText', sans-serif;
+}
+
+
+/* Clases para componentes */
+
+.box-quantity-active {
+  @apply bg-m-Red py-2 px-4 rounded-2xl border border-m-Rose500 absolute -bottom-5 left-0 right-0 flex gap-2 items-center whitespace-nowrap  transition-all duration-150 mx-12 justify-around scale-105 text-white
+}
+
+.btn-quantity {
+  @apply border border-white rounded-full w-6 h-6 flex justify-center items-center cursor-pointer transition-all duration-150 hover:bg-white text-white hover:text-m-Red text-xl
+}
