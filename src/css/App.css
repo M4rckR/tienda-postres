@@ -5,6 +5,7 @@
 @theme {
   /* Colors */
   --color-m-Red: hsl(14, 86%, 42%);
+  --color-m-Red-hover: hsl(14, 86%, 35%);
   --color-m-Green: hsl(159, 69%, 38%);
   --color-m-Rose50: hsl(20, 50%, 98%);
   --color-m-Rose100: hsl(13, 31%, 94%);
