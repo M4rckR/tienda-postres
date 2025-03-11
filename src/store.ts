@@ -19,21 +19,21 @@ export const useDessertStore = create<DessertStore>()(
         addToCart: (dessert) => {
             set((state) => {
                 
-                const existingDessertIndex = state.dessertCart.findIndex(
-                  (item) => item.id === dessert.id
-                );
+                // const existingDessertIndex = state.dessertCart.findIndex(
+                //   (item) => item.id === dessert.id
+                // );
         
-                if (existingDessertIndex !== -1) {
+                // if (existingDessertIndex !== -1) {
                   // Si el producto ya está en el carrito, solo actualizamos la cantidad
-                  const updatedCart = [...state.dessertCart];
+                //   const updatedCart = [...state.dessertCart];
 
-                  updatedCart[existingDessertIndex] = {
-                    ...updatedCart[existingDessertIndex],
-                    quantity: updatedCart[existingDessertIndex].quantity + 1,
-                  };
+                //   updatedCart[existingDessertIndex] = {
+                //     ...updatedCart[existingDessertIndex],
+                //     quantity: updatedCart[existingDessertIndex].quantity + 1,
+                //   };
 
-                  return { dessertCart: updatedCart };
-                }
+                //   return { dessertCart: updatedCart };
+                // }
         
                 // Si no está en el carrito, agregamos el nuevo producto
                 return {

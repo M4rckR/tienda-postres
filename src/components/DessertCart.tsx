@@ -1,5 +1,6 @@
 import { useMemo } from "react"
 import { useDessertStore } from "../store"
+import { ButtonSend } from "../utils/ButtonSend"
 
 export const DessertCart = () => {
 
@@ -53,9 +54,7 @@ export const DessertCart = () => {
                     )
                 }
 
-                <button className="bg-m-Red transition-all duration-150 block w-full text-m-Rose50 py-4 rounded-4xl font-semibold cursor-pointer hover:bg-m-Red-hover">
-                    Confirm Order
-                </button>
+                <ButtonSend>Confirm Order</ButtonSend>
             </>
             
         ): (
