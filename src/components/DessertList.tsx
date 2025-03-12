@@ -30,17 +30,17 @@ export const DessertList = () => {
                 
                 isloading? (
                     <>
-                        <Skeleton className="mb-2" height={350} count={2} />
-                        <Skeleton className="mb-2" height={350} count={2} />
-                        <Skeleton className="mb-2" height={350} count={2} />
+                        <Skeleton  className="mb-2" height={350} count={2} />
+                        <Skeleton  className="mb-2" height={350} count={2} />
+                        <Skeleton  className="mb-2" height={350} count={2} />
                     </>
                 ):  (
                     
 
-                    desserts.map((dessert) => (
-                        <>
-                            <DessertItem key={dessert.name} dessert={dessert} />
-                        </>
+                    desserts.map((item) => (
+                        <div key={item.id}>  
+                            <DessertItem dessert={item} />
+                        </div>
                     ))
                 )
             }

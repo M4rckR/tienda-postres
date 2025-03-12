@@ -7,6 +7,9 @@ export const DessertCart = () => {
 
 
     const dessertCart =   useDessertStore(state => state.dessertCart)
+    const handleProcessOrder =   useDessertStore(state => state.handleProcessOrder)
+    const deleteDessert =   useDessertStore(state => state.deleteDessert)
+
     const cartPriceTotal = useMemo(() => dessertCart.reduce((acc, i) =>  acc + (i.price  * i.quantity), 0 ).toFixed(2) , [dessertCart])
     const dessertCartQuantity =  useMemo(() => dessertCart.reduce((acc, i) => acc + (i.quantity), 0), [dessertCart]) 
 
@@ -19,7 +22,7 @@ export const DessertCart = () => {
             <>
                 {
                     dessertCart.map((item) => (
-                        <article className="border-b py-4 border-m-Rose100 flex items-center justify-between">
+                        <article key={item.id} className="border-b py-4 border-m-Rose100 flex items-center justify-between">
                             <div className="space-y-1">
                                 <p className="font-semibold">{item.name}</p>
                                 <div className="flex gap-2">
@@ -28,7 +31,9 @@ export const DessertCart = () => {
                                     <p className="font-semibold">${(item.price * item.quantity).toFixed(2)}</p>
                                 </div>
                             </div>
-                            <p className="border w-7 h-7 text-2xl flex justify-center items-center rounded-full text-center cursor-pointer hover:bg-m-Rose900 transition-all duration-150 hover:text-m-Rose100 hover:border-m-Rose900 m-0">
+                            <p 
+                                onClick={() => deleteDessert(item)}
+                                className="border w-7 h-7 text-2xl flex justify-center items-center rounded-full text-center cursor-pointer hover:bg-m-Rose900 transition-all duration-150 hover:text-m-Rose100 hover:border-m-Rose900 m-0">
                                 ×
                             </p>
                         </article>      
@@ -53,8 +58,11 @@ export const DessertCart = () => {
                         null
                     )
                 }
-
-                <ButtonSend>Confirm Order</ButtonSend>
+                <div
+                    onClick={handleProcessOrder}
+                >
+                    <ButtonSend>Confirm Order</ButtonSend>
+                </div>
             </>
             
         ): (

@@ -9,14 +9,16 @@ export const DessertItem = ({dessert}:DessertItemProps) => {
     // const dessertCart = (useDessertStore(state => state.dessertCart))
     const addToCart = (useDessertStore(state => state.addToCart))
     const dessertCart = (useDessertStore(state => state.dessertCart))
+    const increaseQuantity = (useDessertStore(state => state.increaseQuantity))
+    const decreaseQuantity = (useDessertStore(state => state.decreaseQuantity))
 
     const cartItem = dessertCart.find(item => item.id === dessert.id);
 
     const onIncreaseQuantity = (cartItem:DessertCart) => {
-        console.log(cartItem)
+        increaseQuantity(cartItem)
     }
     const onDecreaseQuantity = (cartItem:DessertCart) => {
-        console.log(cartItem)
+        decreaseQuantity(cartItem)
     }
 
 
@@ -52,7 +54,6 @@ export const DessertItem = ({dessert}:DessertItemProps) => {
                 >
                     <img src="/assets/images/icon-add-to-cart.svg" alt="Añadir al carrito" />
                     <p className="text-center font-semibold text-m-Rose900">Añadir al carrito</p>
-       
             </div>
         )
     };
